@@ -19,17 +19,7 @@ func main() {
 
 	// User Controller /
 	var userController controllers.UserController
-	userController.Initalize(ginEngin)
-
-	// Graceful shutdown /
-	quit := make(chan os.Signal, 1)
-	signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM)
-
-	<-quit
-	log.Println("🛑 Shutdown signal received")
-
-	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
-	defer cancel()
+	userController.Initialize(ginEngin)
 
 	serve := &http.Server{
 		Addr:    ":8080",
@@ -42,6 +32,16 @@ func main() {
 			log.Fatalf("listen error: %v\n", err)
 		}
 	}()
+
+	// Graceful shutdown /
+	quit := make(chan os.Signal, 1)
+	signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM)
+
+	<-quit
+	log.Println("🛑 Shutdown signal received")
+
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
 
 	if error := serve.Shutdown(ctx); error != nil {
 		log.Println("error while shuting down!")
