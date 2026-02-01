@@ -1,12 +1,12 @@
 app:
   name: gin-user-service
   env: prod
-  port: 8080
+  port: ":9090"
 
 server:
   readTimeout: 5s
   writeTimeout: 10s
-  ShutDownTimeout: 3s
+  ShutDownTimeout: 3
 
 
 database:

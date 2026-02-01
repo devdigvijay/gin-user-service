@@ -17,13 +17,13 @@ type Configuration struct {
 type app struct {
 	Name string `yaml:"name" env:"APP_NAME" env-default:"main"`
 	Env  string `yaml:"env" env:"APP_ENV" env-default:"dev"`
-	Port int    `yaml:"port" env:"APP_PORT" env-default:"8080"`
+	Port string `yaml:"port" env:"APP_PORT" env-default:"8080"`
 }
 
 type server struct {
 	ReadTimeout     string `yaml:"readTimeout" env:"SERVER_READ_TIMEOUT" env-default:"2s"`
 	WriteTimeout    string `yaml:"writeTimeout" env:"SERVER_WRITE_TIMEOUT" env-default:"5s"`
-	ShutDownTimeout string `yaml:"shutDownTimeout" env:"SERVER_SHUTDOWN_TIMEOUT" env-default:"5s"`
+	ShutDownTimeout int    `yaml:"shutDownTimeout" env:"SERVER_SHUTDOWN_TIMEOUT" env-default:"5"`
 }
 
 type database struct {
