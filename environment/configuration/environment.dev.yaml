@@ -1,0 +1,17 @@
+app:
+  name: gin-user-service
+  env: dev
+  port: 8080
+
+server:
+  readTimeout: 5s
+  writeTimeout: 10s
+  ShutDownTimeout: 5s
+
+database:
+  host: localhost
+  port: 5432
+  name: users_db
+  username: admin
+  password: admin123
+  ssl: false
