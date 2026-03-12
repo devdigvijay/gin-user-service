@@ -9,9 +9,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/devdigvijay/gin-user-service/controllers"
-	"github.com/devdigvijay/gin-user-service/environment"
-	"github.com/devdigvijay/gin-user-service/utils"
+	"github.com/devdigvijay/gin-user-service/src/controllers"
+	"github.com/devdigvijay/gin-user-service/src/environment"
+	"github.com/devdigvijay/gin-user-service/src/utils"
 	"github.com/gin-gonic/gin"
 )
 

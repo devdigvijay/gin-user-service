@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"github.com/devdigvijay/gin-user-service/services"
+	"github.com/devdigvijay/gin-user-service/src/services"
 	"github.com/gin-gonic/gin"
 )
 

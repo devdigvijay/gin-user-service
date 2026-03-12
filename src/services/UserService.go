@@ -4,9 +4,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/devdigvijay/gin-user-service/models/requests"
-	"github.com/devdigvijay/gin-user-service/models/responses"
-	"github.com/devdigvijay/gin-user-service/utils"
+	"github.com/devdigvijay/gin-user-service/src/models/requests"
+	"github.com/devdigvijay/gin-user-service/src/models/responses"
+	"github.com/devdigvijay/gin-user-service/src/utils"
 	"github.com/gin-gonic/gin"
 )
 
