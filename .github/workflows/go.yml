@@ -20,6 +20,11 @@ jobs:
       uses: actions/setup-go@v4
       with:
         go-version: '1.26.1'
+    
+    - name: Check Secret Length
+      run: echo ${#NAME}
+      env:
+        MY_SECRET: ${{ secrets.NAME }}
 
     - name: Build
       run: go build ./src/main.go
