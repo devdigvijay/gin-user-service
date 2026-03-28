@@ -22,7 +22,7 @@ jobs:
         go-version: '1.26.1'
     
     - name: Check Secret Length
-      run: echo ${#NAME}
+      run: echo ${#MY_SECRET}
       env:
         MY_SECRET: ${{ secrets.NAME }}
 
